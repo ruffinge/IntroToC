@@ -116,6 +116,10 @@
 	\renewcommand{\labelenumii}{\theenumii.}
 \usepackage{adjustbox}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define copyright page.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\secondpage{\clearpage\null\vfill
 	\pagestyle{empty}
 	\begin{minipage}[b]{0.9\textwidth}
@@ -143,10 +147,17 @@
 	\counterwithin{lstlisting}{chapter}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define metadata
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Introduction to C Programming}
 \date{\today}
 \author{Ethan Ruffing}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frontmatter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 % Create title page
@@ -162,10 +173,37 @@
 \newpage
 \pagenumbering{arabic} % Number pages 1, 2, ...
 
-\chapter{Introduction}\label{ch:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Introduction}\label{ch:introduction}
+\addcontentsline{toc}{chapter}{Introduction}
 This book is intended to be a starting point for an introduction to programming
 in the C programming language. It is not intended to be a complete,
 comprehensive guide, but instead to provide a cursory introduction to important
 concepts and theories relating to programming, both in general and in C.
+
+\section*{Other Resources}\label{sec:other-resources}
+\addcontentsline{toc}{section}{Other Resources}
+Given that this book is not intended to cover any topic in depth, the reader may
+find himself looking for further information on a variety of the topics covered.
+
+The following is a brief list of some excellent resources for such information:
+
+\begin{itemize}
+	\item \emph{The C Programming Language}, 2nd Edition, by B. Kernighan and 
+		D. Ritchie for nearly any and all questions you may have about C. This
+		is a \emph{strongly} recommended book for gaining a true mastery of the
+		language.
+	\item Ethan Ruffing's \emph{C Style Guide} (available at
+		\url{https://github.com/ruffinge/CStyleGuide}) for information on style
+		consistency and programming conventions.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Chapter 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \end{document}
