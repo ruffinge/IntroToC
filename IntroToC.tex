@@ -59,8 +59,8 @@
 	extendedchars=true,
 	% Adds a frame around the code
 	frame=single,
-	% Keeps spaces in text, useful for keeping indentation of code (possibly needs
-	% columns=flexible)
+	% Keeps spaces in text, useful for keeping indentation of code (possibly
+	% needs columns=flexible)
 	keepspaces=true,
 	% Keyword style
 	keywordstyle=\color{blue},
@@ -117,26 +117,7 @@
 	\renewcommand{\labelenumii}{\theenumii.}
 \usepackage{adjustbox}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Define copyright page.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\secondpage{\clearpage\null\vfill
-	\pagestyle{empty}
-	\begin{minipage}[b]{0.9\textwidth}
-	\footnotesize\raggedright
-	\setlength{\parskip}{0.5\baselineskip}
-	Copyright \copyright \the\year\ by Ethan Ruffing\par
-	All Rights Reserved. 
-	\end{minipage}
-	\vspace*{2\baselineskip}
-	\cleardoublepage
-}
-
-\makeatletter
-\g@addto@macro{\maketitle}{\secondpage}
-\makeatother
-
+\input{metadata.tex}
 
 % The following section makes everything get numbered by section. Comment out to
 % return to normal numbering.
@@ -148,12 +129,7 @@
 	\counterwithin{lstlisting}{chapter}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Define metadata
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title{Introduction to C Programming}
-\date{\today}
-\author{Ethan Ruffing}
+
 
 \begin{document}
 
