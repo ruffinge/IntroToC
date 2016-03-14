@@ -3,4 +3,36 @@
 \begin{document}
 \chapter{Basics}
 
+We will begin by examining the structure of a basic C program. As is the 
+long-established convention\footnote{This convention can be traced to the first edition
+of Kernighan and Ritchie's \emph{C Programming Language}. See the note on 
+other resource in the introduction.}, we will use a ``Hello World'' program to
+introduce these concepts.
+
+Examine the source file \texttt{hello.c} reproduced in \autoref{lst:hello.c}.
+
+\begin{code}[caption=Source of the Hello World program.,label=lst:hello.c]
+#include <stdio.h>
+
+int main(void) {
+	printf("Hello, World!");
+}
+\end{code}
+
+\section{Preprocessor Commands}
+We will first examine the preprocessor command at line one. This line instructs
+the preprocessor to insert the entire source of the file \texttt{stdio.h} in the
+current position.
+
+That file (\texttt{stdio.h}) is a standard library file. It contains definitions
+of various functions for interacting with users and file systems. (The file name
+itself is an abbreviation of ``\textbf{st}andar\textbf{d}
+\textbf{i}nput/\textbf{o}utput''.)
+
+This command will automaticaly be processed before the source is passed to the
+main compiler in order to ensure that all necessary functions have been defined.
+
+\section{Function Definitions}
+Next, we will examine lines three through five.
+
 \end{document}
